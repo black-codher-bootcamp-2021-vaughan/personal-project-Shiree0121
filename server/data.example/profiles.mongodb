@@ -1,6 +1,6 @@
 // Below is some initial sample data to get you started.
 
-use("example_db"); // This is our example database. Make sure you don't call your database "example_db".
+use("fitnessappDB"); // This is our example database. Make sure you don't call your database "example_db".
 
 // The drop() command destroys all data from a collection.
 // Make sure you run it against the correct database and collection.
@@ -11,21 +11,53 @@ db.profiles.insertMany([
     {
         "first_name": "Efua",
         "last_name": "Akumanyi",
-        "location": "London"
-    },
-    {
-        "first_name": "Gary",
+        "age": 18,
+        "contact": "07901334827",
+        "address": "89 New Street NORTH LONDON",
+        "postcode": "N48 5CA",
+        "email_address": "wixot22516@aikusy.com",
+        "userId": "cicKineU01",
+        "workout":"pole",
+        "track_goal": [{"level": 3, "date": Date()  }],
+        "videoUrl": "yd5MyF65nOY",
+    },             
+    {   
+        "first_name": "Nicki Minaj",
         "last_name": "McPherson",
-        "location": "London"
+        "age": 48,
+        "contact": "07055538917",
+        "address": "46 Main Street PERTH",
+        "postcode": "PH82 2OL",
+        "email_address": "pugspup5@ezybarber.com",
+        "userId": "oStiCtOm02",
+        "workout":"pole",
+        "track_goal": [{"level": 8, "date": Date()  }],
+        "videoUrl": "AkuuPwySQSM"
     },
     {
-        "first_name": "Tanya",
-        "last_name": "Powell",
-        "location": "London"
-    },
-    {
-        "first_name": "Michael",
+         "first_name": "Tanya",
+         "last_name": "Powell",
+         "age": 33,
+         "contact": "07089080481",
+         "address": "24 Mill Road TAUNTON",
+         "postcode": "TA94 8RQ",
+         "email_address": "bgpngj@scdhn.com",
+         "userId": "HAYfiNES03",
+         "workout": "pole",
+         "track_goal": [{"level": 1, "date": Date()  }],
+         "videoUrl": "6vlFaYgrRfA"
+     },
+     {
+       "first_name": "Michael",
         "last_name": "Hael",
-        "location": "Port Harcourt city"
+        "age": 52,
+        "contact": "07977157709",
+        "address": "95 Highfield Road WEST LONDON",
+        "postcode": "W8 9GS",
+        "email_address": "rokostheprick@neaeo.com",
+        "userId": "LEInTona04",
+        "workout":"",
+        "track_goal": [{"level": 4, "date": Date()  }],
+        "videoUrl": "V3cp2lm4qx4"
     }
-]);
+ ]);

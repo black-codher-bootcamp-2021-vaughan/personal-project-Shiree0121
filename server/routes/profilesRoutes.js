@@ -13,6 +13,7 @@ const profileRoutes = (app) => {
 
     return res.status(201).send({
       error: false,
+      message: "Thank you for posting this",
       profile,
     });
   });

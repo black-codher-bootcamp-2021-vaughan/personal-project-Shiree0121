@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-
+import { Button } from "@mui/material";
 // SERVICES THAT CALL OUR API ENDPOINTS
 import { getAllProfiles } from "./services/profileService";
+import {TrainingCard} from  "./components/TrainingCard";
 
 function App() {
   const [profiles, setProfiles] = useState(null);
@@ -19,18 +20,21 @@ function App() {
 
   const renderProfile = (user) => {
     return (
-      <li key={user._id}>
-        <h3>
-          {`${user.first_name} 
-          ${user.last_name}`}
-        </h3>
-        <p>{user.location}</p>
-      </li>
+      <TrainingCard title={user.first_name} duration={10} level={3} videoUrl={user.videoUrl}> </TrainingCard> 
+      // <li key={user._id}>
+      //   <h3>
+      //     {`${user.first_name} 
+      //     ${user.last_name}`}
+      //   </h3>
+      //   <p>{user.location}</p>
+      // </li>
     );
   };
 
   return (
-    <div>
+  <div>
+    {/* <Button variant="text">Text</Button> */}
+    
       <ul>
         {profiles && profiles.length > 0 ? (
           profiles.map((profile) => renderProfile(profile))
