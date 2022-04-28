@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 import { getAllProfiles } from "./services/profileService";
 import {TrainingCard} from  "./components/TrainingCard";
 
-function App() {
+function Trainings() {
   const [profiles, setProfiles] = useState(null);
 
   useEffect(() => {
@@ -46,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default Trainings;

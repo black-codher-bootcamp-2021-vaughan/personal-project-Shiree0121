@@ -6,24 +6,18 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Avatar } from "@mui/material";
+// import { Newlogins } from "../services/Newlogins";
+
+
+//  this is how you can customerize designs as it is css sx={{ maxWidth: 345 }} 
 
 export const TrainingCard = ({ title, level, duration, date, videoUrl }) => {
   console.log(videoUrl);
   return (
-    <Card sx={{ maxWidth: 345 }} key={title}>
-      {/* //   <iframe
-    //     width="560"
-    //     height="315"
-    //     src="https://www.youtube.com/embed/yd5MyF65nOY"
-    //     title="YouTube video player"
-    //     frameborder="0"
-    //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    //     allowfullscreen
-    //   ></iframe> */}
-      <CardMedia
+      <Card key={title}> 
+     <CardMedia
         component="iframe"
-        image={"https://www.youtube.com/embed/"+videoUrl}
-      />
+        image={"https://www.youtube.com/embed/"+videoUrl} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
