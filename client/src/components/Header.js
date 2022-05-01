@@ -10,6 +10,8 @@ export const Header = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>
+      
+
         <Avatar
           alt="Remy Sharp"
           src="https://randomuser.me/api/portraits/women/19.jpg"
@@ -20,9 +22,9 @@ export const Header = () => {
         <h4> Location </h4>
       </Grid>
       <Grid item xs={2}>
-        {/* <Badge badgeContent={4} color="primary">
+        <Badge badgeContent={4} color="primary">
           <NotificationsNoneIcon color="action" />
-        </Badge> */}
+        </Badge>
       </Grid>
     </Grid>
   );

@@ -1,47 +1,45 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 // SERVICES THAT CALL OUR API ENDPOINTS
-import { getAllProfiles } from "./services/profileService";
-import {TrainingCard} from  "./components/TrainingCard";
+import { getAllProfiles, getAllTrainings } from "./services/profileService";
+import { TrainingCard } from "./components/TrainingCard";
 
 function Trainings() {
-  const [profiles, setProfiles] = useState(null);
+  const [trainings, setTrainings] = useState(null);
 
   useEffect(() => {
-    async function getProfiles() {
-      if (!profiles) {
-        const response = await getAllProfiles();
-        setProfiles(response);
+    async function getTrainings() {
+      if (!trainings) {
+        const response = await getAllTrainings();
+        setTrainings(response);
       }
     }
 
-    getProfiles();
-  }, [profiles]);
+    getTrainings();
+  }, [trainings]);
 
-  const renderProfile = (user) => {
+  const renderTraining = (training) => {
     return (
-      <TrainingCard title={user.first_name} duration={10} level={3} videoUrl={user.videoUrl}> </TrainingCard> 
-      // <li key={user._id}>
-      //   <h3>
-      //     {`${user.first_name} 
-      //     ${user.last_name}`}
-      //   </h3>
-      //   <p>{user.location}</p>
-      // </li>
+      <TrainingCard
+        title={training.title}
+        duration={training.duration}
+        level={training.level}
+        videoUrl={training.videoUrl}
+      >
+        {" "}
+      </TrainingCard>
     );
   };
 
   return (
-  <div>
-    {/* <Button variant="text">Text</Button> */}
-    
-      <ul>
-        {profiles && profiles.length > 0 ? (
-          profiles.map((profile) => renderProfile(profile))
-        ) : (
-          <p>No profiles found</p>
-        )}
-      </ul>
+    <div>
+      {/* <Button variant="text">Text</Button> */}
+
+      {trainings && trainings.length > 0 ? (
+        trainings.map((training) => renderTraining(training))
+      ) : (
+        <p>No trainings found</p>
+      )}
     </div>
   );
 }

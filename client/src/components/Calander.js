@@ -16,6 +16,24 @@ tomorrowDate.setDate(tomorrowDate.getDate() + 1);
 const twodaysDate = new Date(day);
 twodaysDate.setDate(twodaysDate.getDate() + 2);
 
+const threedaysDate = new Date(day);
+threedaysDate.setDate(threedaysDate.getDate() + 3);
+
+const fourdaysDate = new Date(day);
+fourdaysDate.setDate(fourdaysDate.getDate() + 4);
+
+const fivedaysDate = new Date(day);
+fivedaysDate.setDate(fivedaysDate.getDate() + 5);
+
+const sixdaysDate = new Date(day);
+fourdaysDate.setDate(sixdaysDate.getDate() + 6);
+
+const sevendaysDate = new Date(day);
+sevendaysDate.setDate(sevendaysDate.getDate() + 7);
+
+const eightdaysDate = new Date(day);
+eightdaysDate.setDate(eightdaysDate.getDate() + 8);
+
 export const Calendar = () => {
   const today = {
     name: weekday[day.getDay()],
@@ -29,6 +47,22 @@ export const Calendar = () => {
     name: weekday[day.getDay() + 2],
     date: twodaysDate.getDate(),
   };
+  const threedays = {
+    name: weekday[day.getDay() + 3],
+    date: threedaysDate.getDate(),
+  };
+  const fourdays = {
+    name: weekday[day.getDay() + 4],
+    date: fourdaysDate.getDate(),
+  };
+  const fivedays = {
+    name: weekday[day.getDay() + 5],
+    date: fivedaysDate.getDate(),
+  };
+  const sixdays = {
+    name: weekday[day.getDay() + 6],
+    date: sixdaysDate.getDate(),
+  };
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>
@@ -40,20 +74,20 @@ export const Calendar = () => {
         <Avatar>{tomorrow.date}</Avatar>
       </Grid>
       <Grid item xs={2}>
-      {twodays.name}
+        {twodays.name}
         <Avatar>{twodays.date}</Avatar>
       </Grid>
       <Grid item xs={2}>
-        Thursday
-        <Avatar>06</Avatar>
+        {threedays.name}
+        <Avatar>{threedays.date}</Avatar>
       </Grid>
       <Grid item xs={2}>
-        Friday
-        <Avatar>07</Avatar>
+        {fourdays.name}
+        <Avatar>{fourdays.date}</Avatar>
       </Grid>
       <Grid item xs={2}>
-        Saturday
-        <Avatar>08</Avatar>
+        {fivedays.name}
+        <Avatar>{fivedays.date}</Avatar>
       </Grid>
     </Grid>
   );

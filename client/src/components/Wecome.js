@@ -20,7 +20,10 @@ export const Welcome = () => {
       <Container maxWidth="sm">
         <Header></Header> 
         <Calendar></Calendar>
-       Big Video will go here
+        <br></br>
+        <br></br>
+       {/* <h3>Sneak-peak (signup)</h3> */}
+       <br></br>
         <Trainings></Trainings>
       </Container>
     </ThemeProvider>

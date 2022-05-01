@@ -1,0 +1,39 @@
+// Below is some initial sample data to get you started.
+
+use("fitnessappDB"); // This is our example database. Make sure you don't call your database "example_db".
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+// db.profiles.drop();
+
+// Insert a few documents into the profiles collection.
+db.trainings.insertMany([  
+    {
+        "title": "10 pretty pole dance moves",
+        "level": "beginners",
+        "duration": 10,
+        "date": "",
+        "videoUrl": "yd5MyF65nOY",
+    },             
+    {   
+       "title": "Beginner pole moves",
+        "level": "beginners",
+        "duration": 1,
+        "date": "",
+        "videoUrl": "Tap-qXHJIpQ"
+    },
+    {
+        "title": "Pole strenght and conditioning",
+        "level": "Intermediate",
+        "duration": 6,
+        "date": "",
+        "videoUrl": "1PGa1kahB8I"
+     },
+     {
+        "title": "Pole dance fitness",
+        "level": "Advanced",
+        "duration": 7,
+        "date": "",
+        "videoUrl": "YuqrL9Bi7XQ"
+    }
+ ]);
