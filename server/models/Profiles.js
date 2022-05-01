@@ -19,8 +19,16 @@ const profileSchema = new Schema({
   videoUrl:String
 });
 
+const trainingSchema = new Schema({
+videoUrl: String,
+title: String,
+level: String,
+duration: String, 
+date: String
 
+})
 
 mongoose.model("profiles", profileSchema);
+mongoose.model("trainings", trainingSchema);
 
   
