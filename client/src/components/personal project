@@ -9,7 +9,7 @@ use("fitnessappDB"); // This is our example database. Make sure you don't call y
 // Insert a few documents into the profiles collection.
 db.trainings.insertMany([  
     {
-        "title": "10 pretty pole dance moves",
+        "title": "Urban Pole Routine",
         "level": "beginners",
         "duration": 10,
         "date": "",

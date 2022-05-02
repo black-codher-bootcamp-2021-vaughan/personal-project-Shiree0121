@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.popup-wrapper {
+  color: black;
+  background-color: red;
+}
+
+.close-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-button {
+  width: 10px;
+}

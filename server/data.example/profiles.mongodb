@@ -20,6 +20,7 @@ db.profiles.insertMany([
         "workout":"pole",
         "track_goal": [{"level": 3, "date": Date()  }],
         "videoUrl": "yd5MyF65nOY",
+        "src":
     },             
     {   
         "first_name": "Nicki Minaj",

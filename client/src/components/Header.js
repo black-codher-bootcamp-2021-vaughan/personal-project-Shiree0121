@@ -19,7 +19,7 @@ export const Header = () => {
       </Grid>
       <Grid item xs={8}>
         <h3>{greeting}</h3>
-        <h4> Location </h4>
+        <h4> Location: Birmingham </h4>
       </Grid>
       <Grid item xs={2}>
         <Badge badgeContent={4} color="primary">
