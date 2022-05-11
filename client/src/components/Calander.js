@@ -1,15 +1,24 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import { Avatar } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
 var day = new Date();
 var weekday = new Array(7);
-weekday[0] = "Sunday";
-weekday[1] = "Monday";
-weekday[2] = "Tuesday";
-weekday[3] = "Wednesday";
-weekday[4] = "Thursday";
-weekday[5] = "Friday";
-weekday[6] = "Saturday";
+weekday[0] = "Sun";
+weekday[1] = "Mon";
+weekday[2] = "Tue";
+weekday[3] = "Wed";
+weekday[4] = "Thu";
+weekday[5] = "Fri";
+weekday[6] = "Sat";
+weekday[7] = "Sun";
+weekday[8] = "Mon";
+weekday[9] = "Tue";
+weekday[10] = "Wed";
+weekday[11] = "Thu";
+weekday[12] = "Fri";
+weekday[13] = "Sat";
 const tomorrowDate = new Date(day);
 tomorrowDate.setDate(tomorrowDate.getDate() + 1);
 
@@ -63,6 +72,7 @@ export const Calendar = () => {
     name: weekday[day.getDay() + 6],
     date: sixdaysDate.getDate(),
   };
+  console.log('hello',day.getDay()+1)
   return (
     <Grid container spacing={2}>
       <Grid item xs={2}>

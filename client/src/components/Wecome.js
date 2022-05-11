@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@mui/material";
-import { Header } from "./Header";
+import { Header, Banner } from "./Header";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 // import {Newlogins} from './Newlogins'
 import { orange } from "@mui/material/colors";
@@ -39,6 +39,7 @@ export const Welcome = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="sm">
+        <Banner></Banner>
         <Header></Header> 
         <Calendar></Calendar>
         <br></br>
